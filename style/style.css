@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -48,6 +49,7 @@ table {
 .wrapperhead{
     background: #000000; 
     margin-bottom: 135px;
+    display: flex;
 }
 .containerhead{
     width: 1200px;
@@ -55,6 +57,7 @@ table {
     font-family: 'Montserrat', sans-serif;
     position: relative;
     padding: 10px 0;
+    
   
 }
 .main_ul{
@@ -133,4 +136,43 @@ color: white;
     font-size: 25px;
     font-weight: 800;
     margin: 0 0 10px 0;
+}
+.footer{
+    background: #000;
+   
+}
+.content{
+    flex-grow: 1;
+    width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 135px;
+}
+.flex{
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+
+
+}
+.footer_ul li a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.footer_ul{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+} .icon{
+    fill: white;
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.icon:hover{
+    fill: yellow;
 }
