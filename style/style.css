@@ -62,11 +62,11 @@ table {
 }
 .main_ul{
     text-align: center;
-    
+    align-items: center;
     display: flex;
     justify-content: center; 
     column-gap: 15px; 
-    
+
     
     
 }
@@ -80,28 +80,70 @@ table {
 .main_ul > li a{
     text-decoration: none;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 0 10px 40px;
     display: block;
+    position: relative;
     
 }
-.main_ul > li:hover .second_ul,
-.second_ul > li:hover .third_ul{
-    display:block;
+.main_ul .down a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 40px 10px 0;
+    display: block;
+    position: relative;   
+}
+.main_ul .left a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 0 10px 20px;
+    display: block;
+    position: relative;   
 }
 
-.main_ul > li:hover,
-.second_ul > li:hover,
-.third_ul> li:hover {
-  background: red;  
+.main_ul > li:hover .second_ul
+{
+    top: 100%;
+    
 }
+.second_ul > li:hover .third_ul{
+    z-index: 5;
+    opacity: 1;
+}
+.main_ul>li:hover,
+.second_ul>li:hover,
+.third_ul>li:hover{
+    background-color: green;
+  
+}
+.main_ul>li a:hover{
+    color: yellow;
+    fill: yellow;
+}
+.main_ul>li a:hover .icon,
+.main_ul>li a:hover .icon2{
+
+    fill: yellow;
+}
+
+
 .second_ul{
     position: absolute;
-    top: 100%;
+    top: -450%;
     left: 0;
-    display: none;
+    transition: all 1s linear;
     background: rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
+
+
 .second_ul > li{
+    position: relative;
+}
+.second_ul>li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 0 10px 40px;
+   
     position: relative;
 }
 .third_ul{
@@ -109,7 +151,10 @@ table {
     top: 0;
     right: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: none;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    z-index: -5;
+    
    
     
 }
@@ -155,11 +200,24 @@ color: white;
 
 
 }
-.footer_ul li a{
+.footer_ul>li a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    padding: 13px 0 10px 48px;
+    position: relative;
+    
 }
+.footer_ul>li a:hover .icon   {
+fill: yellow;
+}
+.footer_ul>li a:hover .span    {
+    color: yellow;
+   
+    }
+
 .footer_ul{
     display: flex;
     column-gap: 20px;
@@ -167,12 +225,54 @@ color: white;
     align-items: center;
     text-align: center;
 
-} .icon{
+} 
+
+.icon {
     fill: white;
-    display: block;
     width: 40px;
     height: 40px;
 }
-.icon:hover{
-    fill: yellow;
+
+.icon2 {
+    fill: white;
+    width: 40px;
+    height: 40px;
+}
+.footer_ul .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+
+.main_ul .icon{
+    position: absolute;
+    top: 0;
+  
+    left: 0;
+    width: 30px;
+    height: 30px;
+    display: block;
+} 
+.left .icon{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    
+}
+.main_ul .icon2{
+    position: absolute;
+    
+   left: auto;
+   right: 0;
+   top: 0;
+    width: 30px;
+    height: 30px;
+    display: block;
+} 
+.regulartitle{
+    padding: 0 0 0 45px;
+}
+.firstsite{
+    padding: 0 20px 0 0;  
 }
