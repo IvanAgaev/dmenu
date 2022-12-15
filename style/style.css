@@ -192,6 +192,7 @@ color: white;
     margin: 0 auto;
     text-align: justify;
     margin-bottom: 135px;
+    opacity: 0.8;
 }
 .flex{
     display: flex;
@@ -275,4 +276,64 @@ fill: yellow;
 }
 .firstsite{
     padding: 0 20px 0 0;  
+}
+.popup{
+    position: fixed;
+    bottom: 0;
+    right: 50%; 
+    border: 2px solid yellow;
+    width: 400px;
+    transform: translate(50%, 75%);
+    opacity: 1;
+    transition: all 0.5s ease-in;
+    z-index: 10;
+    background: #000;
+    
+}
+.popup >h3{
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid yellow;
+}
+.popup:hover{
+    position: fixed;
+    bottom: 0;
+    right: 50%; 
+    border: 2px solid yellow;
+    width: 400px;
+    transform: translate(50%,0);
+    
+    
+}
+.footer{
+    width: 100px;
+    padding: 25px 0;
+    margin: 0 auto;
+
+}
+.svg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(-45deg);
+    overflow: hidden;
+    align-items: center;
+}
+.svg >li a  {
+   display: block;
+   border: 2px solid white;
+   width: 35px;
+   height: 35px;
+   overflow: hidden;
+}
+.icon3 {
+    fill: white;
+    width: 25px;
+    height: 25px;
+    transform: translate(5%,5%) rotate(45deg) ;
+}
+.icon3:hover{
+    fill: yellow;
 }
