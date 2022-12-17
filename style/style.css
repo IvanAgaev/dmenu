@@ -248,7 +248,6 @@ fill: yellow;
 .main_ul .icon{
     position: absolute;
     top: 0;
-  
     left: 0;
     width: 30px;
     height: 30px;
@@ -283,28 +282,26 @@ fill: yellow;
     right: 50%; 
     border: 2px solid yellow;
     width: 400px;
-    transform: translate(50%, 75%);
+    transform: translate(50%, calc(100% - 39px));
     opacity: 1;
-    transition: all 0.5s ease-in;
     z-index: 10;
     background: #000;
-    
+    overflow: hidden; 
+    transition: all 1s linear; 
+}
+.popup:not(:hover) {
+    animation: shaking .5s linear 1s infinite; 
 }
 .popup >h3{
     font-size: 35px;
     color: white;
     text-align: center;
-    border-bottom: 2px solid yellow;
+    border-bottom: 2px solid yellow;   
 }
+
 .popup:hover{
-    position: fixed;
-    bottom: 0;
-    right: 50%; 
-    border: 2px solid yellow;
-    width: 400px;
-    transform: translate(50%,0);
-    
-    
+   transform: translate(50%, 0);
+   animation: dropup 1s linear 1; 
 }
 .footer{
     width: 100px;
@@ -324,16 +321,35 @@ fill: yellow;
 .svg >li a  {
    display: block;
    border: 2px solid white;
-   width: 35px;
-   height: 35px;
    overflow: hidden;
+   padding: 7px;
 }
 .icon3 {
     fill: white;
     width: 25px;
     height: 25px;
-    transform: translate(5%,5%) rotate(45deg) ;
+    transform: rotate(45deg) ;
 }
-.icon3:hover{
+.svg > li a:hover .icon3{
     fill: yellow;
+}
+@keyframes shaking{ 
+    
+    50%{
+        transform: translate(calc(50%), calc(100% - 41px));
+      
+    }
+    100%{
+        transform: translate(calc(50%), calc(100% - 37px));
+   
+    }
+}
+@keyframes dropup {
+    0%{
+        transform: translate(50%, calc(100% - 39px));
+    }
+    100%{
+        transform: translate(50%, 0);
+      
+    }
 }
